@@ -1,0 +1,168 @@
+body {
+    margin: 0;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.frame_principal {
+    display: grid;
+    background-color: black;
+    height: 90vh;
+    padding: 20px; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 15px;
+    grid-template-areas: 
+        "header header header"
+        "hero_section hero_section hero_section"
+        "card1 card2 card3"
+        "about about about"
+        "call call call"
+        "footer footer footer"
+    ;
+}
+
+.header {
+    font-size: 25px;
+    border-radius: 5px;
+    text-align: center;
+    grid-area: header;
+    background-color: rgb(51, 66, 86);    
+    color: white;
+
+}
+
+.hero_section {
+    font-size: 20px;
+    grid-area: hero_section;
+    border-radius: 5px;
+    text-align: center;
+    color: rgb(41, 68, 145);
+    background-color: rgb(219, 235, 254);
+}
+
+    .boton_cta {
+        border-radius: 5px;
+        background-color: blue;
+        color: rgb(255, 255, 255);
+        font-size: 15px;
+    }
+
+.card1 {
+    grid-area: card1;
+    border-radius: 5px;
+    background-color: rgb(220, 252, 231);
+    color: rgb(30, 108, 60);
+    font-size: 20px;
+}
+
+.card2 {
+    grid-area: card2;
+    border-radius: 5px;
+    background-color: rgb(220, 252, 231);
+    color: rgb(30, 108, 60);
+    font-size: 20px;
+}
+
+.card3 {
+    grid-area: card3;
+    border-radius: 5px;
+    background-color: rgb(220, 252, 231);
+    color: rgb(30, 108, 60);
+    font-size: 20px;
+}
+
+.card4 {
+    display: none;
+}
+
+.about {
+    grid-area: about;
+    border-radius: 5px;
+    background-color: rgb(243, 232, 255);
+    font-size: 20px;
+    color: rgb(119, 51, 177);
+}
+
+.about2 {
+    display: none;
+}
+
+.call {
+    grid-area: call;
+    border-radius: 5px;
+    background-color: rgb(255, 244, 199);
+    font-size: 20px;
+    color: rgb(148, 67, 17);
+}
+
+.footer {
+    grid-area: footer;
+    border-radius: 5px;
+    font-size: 20px;
+    color: white;
+    background-color: rgb(51, 66, 86);
+}
+
+@media (max-width: 900px) {
+    .frame_principal {
+        display: grid;
+        background-color: black;
+        height: 90vh;
+        padding: 20px; 
+        grid-template-columns: 1fr 1fr; 
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        gap: 15px;
+        grid-template-areas: 
+            "header header"
+            "hero_section hero_section"
+            "card1 card2"
+            "card3 card4"
+            "about about"
+            "call call "
+            "footer footer"
+        ;
+    }
+    .card4 {
+        display: revert;
+        grid-area: card4;
+        border-radius: 5px;
+        background-color: rgb(220, 252, 231);
+        color: rgb(30, 108, 60);
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 600px ) {
+    .about {
+        display: none;
+    }
+    .frame_principal {
+        display: grid;
+        background-color: black;
+        height: 100%;
+        padding: 20px; 
+        grid-template-columns: 1fr; 
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        gap: 15px;
+        grid-template-areas: 
+            "header"
+            "hero_section"
+            "card1"
+            "card2"
+            "card3"
+            "card4"
+            "about2"
+            "call"
+            "footer"
+        ;
+    }
+    .about2 {
+        display: revert;
+        grid-area: about2;
+        border-radius: 5px;
+        background-color: rgb(243, 232, 255);
+        font-size: 20px;
+        color: rgb(119, 51, 177);
+    }
+}
